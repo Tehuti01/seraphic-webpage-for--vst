@@ -496,6 +496,173 @@
   animation: pulse-glow 2s var(--ease-phi) infinite;
 }
 
+/* ═══════════════════════════════════════════════════════════════════════════ */
+/* PREMIUM ANIMATION KEYFRAMES — 500x Better Effects */
+/* ═══════════════════════════════════════════════════════════════════════════ */
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes gradient-shift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes glow-pulse {
+  0%,
+  100% {
+    text-shadow: 0 0 10px rgba(255, 176, 0, 0.3),
+      0 0 20px rgba(255, 176, 0, 0.1);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(255, 176, 0, 0.7),
+      0 0 40px rgba(255, 176, 0, 0.4), 0 0 80px rgba(255, 176, 0, 0.2);
+  }
+}
+
+@keyframes border-rotate {
+  0% {
+    --border-angle: 0turn;
+  }
+  100% {
+    --border-angle: 1turn;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes text-shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+@keyframes card-shine {
+  0% {
+    transform: translateX(-150%) skewX(-20deg);
+  }
+  100% {
+    transform: translateX(250%) skewX(-20deg);
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────────────── */
+/* PREMIUM UTILITY CLASSES */
+/* ─────────────────────────────────────────────────────────────────────── */
+
+/* Animated gradient text */
+.s-text-gradient {
+  background: linear-gradient(
+    90deg,
+    var(--c-lcd-amber) 0%,
+    var(--c-amber-hot) 25%,
+    #ffffff 50%,
+    var(--c-amber-hot) 75%,
+    var(--c-lcd-amber) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: text-shimmer 4s linear infinite;
+}
+
+/* Text glow pulse effect */
+.s-text-glow-pulse {
+  animation: glow-pulse 3s var(--ease-phi) infinite;
+}
+
+/* Animated border glow */
+.s-border-glow {
+  border: 1px solid transparent;
+  position: relative;
+}
+
+.s-border-glow::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: conic-gradient(
+    from var(--border-angle),
+    transparent 25%,
+    rgba(255, 176, 0, 0.6) 50%,
+    transparent 75%
+  );
+  animation: border-rotate 4s linear infinite;
+  z-index: -1;
+}
+
+/* Card shimmer on hover */
+.s-card-glass::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    110deg,
+    transparent 40%,
+    rgba(255, 176, 0, 0.04) 50%,
+    transparent 60%
+  );
+  background-size: 300% 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--dur-mid) var(--ease-phi);
+}
+
+.s-card-glass:hover::before {
+  opacity: 1;
+  animation: shimmer 2s linear infinite;
+}
+
+/* Card shine sweep element */
+.card-shine-sweep {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.04),
+    transparent
+  );
+  transform: skewX(-20deg);
+}
+
+.group:hover .card-shine-sweep {
+  animation: card-shine 0.8s ease forwards;
+}
+
+/* Float animation utility */
+.animate-float {
+  animation: float 6s var(--ease-phi) infinite;
+}
+
 /* ─────────────────────────────────────────────────────────────────────── */
 /* SCROLLBAR STYLING */
 /* ─────────────────────────────────────────────────────────────────────── */

@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { TECH_SPECS, TECH_STACK } from "@/lib/constants";
 import { staggerContainerVariant, staggerItemVariant } from "@/lib/animations";
+import AnimatedCounter from "@/components/ui/AnimatedCounter";
 
 export default function ArchitectureSlide() {
   return (
@@ -67,7 +68,7 @@ export default function ArchitectureSlide() {
               {/* Glow on hover */}
               <div className="absolute inset-0 bg-gradient-to-b from-[rgba(255,176,0,0.05)] to-transparent pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <p className="text-[var(--type-3xl)] s-text-lcd font-light relative z-10 transition-all duration-300 group-hover:drop-shadow-[0_0_15px_rgba(255,176,0,0.5)]">
-                {spec.value}
+                <AnimatedCounter value={spec.value} />
               </p>
               <p className="text-[var(--type-xs)] text-[var(--c-text-muted)] mt-2 uppercase tracking-wider relative z-10">
                 {spec.label}
