@@ -1,0 +1,164 @@
+{
+  "plugins": [
+    {
+      "id": "phi-synth",
+      "slug": "phi-synth",
+      "name": "φ-Synth",
+      "tagline": "Geometric Synthesizer",
+      "description": "7 φ-tuned oscillators with sacred geometry modulation. Sound that evolves forever.",
+      "longDescription": "φ-Synth harnesses the golden ratio across every dimension: oscillator frequencies, envelope curves, and LFO rates all follow φ proportions. The result is sound that feels naturally cohesive, with harmonics that resolve to mathematical perfection. Layer 7 independent oscillators, each tuned to sacred geometry intervals, and sculpt infinite soundscapes.",
+      "price": 49,
+      "salePrice": null,
+      "type": "synth",
+      "formats": ["VST3", "CLAP", "AU", "AAX"],
+      "image": "/plugins/phi-synth/hero.png",
+      "thumbnail": "/plugins/phi-synth/thumb.png",
+      "videoUrl": "",
+      "screenshots": [],
+      "specs": {
+        "cpuLoad": "< 3%",
+        "latency": "< 0.5ms",
+        "voices": "128",
+        "bitDepth": "64-bit"
+      },
+      "features": [
+        "7 φ-tuned oscillators",
+        "Sacred geometry modulation",
+        "Real-time waveform morphing",
+        "Infinite preset library",
+        "Zero-latency response"
+      ],
+      "version": "1.0.0",
+      "releaseDate": "2026-01-15",
+      "published": true
+    },
+    {
+      "id": "metatron-reverb",
+      "slug": "metatron-reverb",
+      "name": "Metatron Reverb",
+      "tagline": "Spatial Harmonic Reverb",
+      "description": "Reverb engineered through Metatron's Cube geometry. Infinite depth.",
+      "longDescription": "Metatron Reverb reimagines spatial processing through sacred geometry. The impulse response is calculated from Metatron's Cube proportions, creating a reverb that is simultaneously precise and infinitely deep. Every reflection follows harmonic principles that reinforce your mix rather than muddy it.",
+      "price": 39,
+      "salePrice": null,
+      "type": "effect",
+      "formats": ["VST3", "CLAP", "AU", "AAX"],
+      "image": "/plugins/metatron-reverb/hero.png",
+      "thumbnail": "/plugins/metatron-reverb/thumb.png",
+      "videoUrl": "",
+      "screenshots": [],
+      "specs": {
+        "cpuLoad": "< 2%",
+        "latency": "< 1ms",
+        "algorithms": "5",
+        "bitDepth": "64-bit"
+      },
+      "features": [
+        "Metatron's Cube geometry processing",
+        "5 spatial algorithms",
+        "Harmonic decay envelopes",
+        "Real-time room modeling",
+        "Sub-millisecond latency"
+      ],
+      "version": "1.0.0",
+      "releaseDate": "2026-01-15",
+      "published": true
+    },
+    {
+      "id": "flower-eq",
+      "slug": "flower-eq",
+      "name": "Flower EQ",
+      "tagline": "Harmonic Equalizer",
+      "description": "6-band EQ with Flower of Life frequency mapping. Precision beauty.",
+      "longDescription": "Flower EQ maps each band to the 6 petals of the Flower of Life pattern, aligning your mix with sacred geometry proportions. The frequency centers follow golden ratio intervals, making it impossible to create harsh or discordant EQ shapes. 12dB range per band with smooth, musical curves.",
+      "price": 29,
+      "salePrice": null,
+      "type": "effect",
+      "formats": ["VST3", "CLAP", "AU", "AAX"],
+      "image": "/plugins/flower-eq/hero.png",
+      "thumbnail": "/plugins/flower-eq/thumb.png",
+      "videoUrl": "",
+      "screenshots": [],
+      "specs": {
+        "cpuLoad": "< 1%",
+        "latency": "< 0.1ms",
+        "bands": "6",
+        "gain": "±12dB"
+      },
+      "features": [
+        "6-band harmonic EQ",
+        "Flower of Life frequency mapping",
+        "φ-proportioned band spacing",
+        "Smooth musical curves",
+        "Minimal CPU load"
+      ],
+      "version": "1.0.0",
+      "releaseDate": "2026-01-15",
+      "published": true
+    },
+    {
+      "id": "torus-delay",
+      "slug": "torus-delay",
+      "name": "Torus Delay",
+      "tagline": "Spatial Delay",
+      "description": "Torus-geometry delay with φ-proportioned feedback. Infinite spirals.",
+      "longDescription": "Torus Delay processes audio through a torus topology, with feedback times calculated from the golden ratio. Each echo spirals through space in mathematically perfect proportions. Tap tempo, 4 independent delay lines, and feedback decay that follows harmonic rules rather than linear decay.",
+      "price": 24,
+      "salePrice": null,
+      "type": "effect",
+      "formats": ["VST3", "CLAP", "AU", "AAX"],
+      "image": "/plugins/torus-delay/hero.png",
+      "thumbnail": "/plugins/torus-delay/thumb.png",
+      "videoUrl": "",
+      "screenshots": [],
+      "specs": {
+        "cpuLoad": "< 2%",
+        "latency": "< 0.5ms",
+        "delayLines": "4",
+        "maxDelay": "5s"
+      },
+      "features": [
+        "Torus-geometry processing",
+        "φ-proportioned feedback",
+        "Tap tempo sync",
+        "4 independent delay lines",
+        "Harmonic decay envelopes"
+      ],
+      "version": "1.0.0",
+      "releaseDate": "2026-01-15",
+      "published": true
+    },
+    {
+      "id": "crystal-comp",
+      "slug": "crystal-comp",
+      "name": "Crystal Comp",
+      "tagline": "Geometric Compressor",
+      "description": "Compressor tuned to crystalline ratios. Transparent presence.",
+      "longDescription": "Crystal Comp applies compression curves based on crystal lattice geometry, resulting in a compressor that is simultaneously transparent and present. The attack and release curves follow harmonic proportions, preventing the squashed sound of traditional compressors. Perfect for vocals, drums, and mix bus.",
+      "price": 19,
+      "salePrice": null,
+      "type": "dynamics",
+      "formats": ["VST3", "CLAP", "AU", "AAX"],
+      "image": "/plugins/crystal-comp/hero.png",
+      "thumbnail": "/plugins/crystal-comp/thumb.png",
+      "videoUrl": "",
+      "screenshots": [],
+      "specs": {
+        "cpuLoad": "< 1%",
+        "latency": "< 0.1ms",
+        "ratio": "1.4 - ∞",
+        "range": "40dB"
+      },
+      "features": [
+        "Crystal lattice compression curves",
+        "Harmonic attack/release",
+        "Transparent detection",
+        "Sidechain filtering",
+        "Makeup gain automation"
+      ],
+      "version": "1.0.0",
+      "releaseDate": "2026-01-15",
+      "published": true
+    }
+  ]
+}

@@ -1,0 +1,539 @@
+/* ═══════════════════════════════════════════════════════════════════════════ */
+/* SERAPHIC SONIC DESIGN SYSTEM — seraphic.css v1.0                            */
+/* "Every pixel obeys the mathematics of the golden ratio."                    */
+/* ═══════════════════════════════════════════════════════════════════════════ */
+
+:root {
+  /* ─────────────────────────────────────────────────────────────────────── */
+  /* φ SPACING SCALE — Based on φ = 1.618033988 */
+  /* Each step: previous × φ */
+  /* ─────────────────────────────────────────────────────────────────────── */
+  --phi-0: 1px;
+  --phi-1: 1.618rem;
+  --phi-2: 2.618rem;
+  --phi-3: 4.236rem;
+  --phi-4: 6.854rem;
+  --phi-5: 11.09rem;
+  --phi-6: 17.944rem;
+
+  /* Precise pixel equivalents for web use: */
+  --phi-0: 1px;
+  --phi-1: 10px;
+  --phi-2: 16px;
+  --phi-3: 26px;
+  --phi-4: 42px;
+  --phi-5: 68px;
+  --phi-6: 110px;
+  --phi-7: 178px;
+  --phi-8: 288px;
+  --phi-9: 466px;
+  --phi-10: 754px;
+  --phi-11: 1220px;
+  --phi-12: 1974px;
+
+  /* Fractional φ spacers */
+  --phi-1-5: 6px;
+  --phi-2-5: 11px;
+  --phi-3-5: 18px;
+
+  /* ─────────────────────────────────────────────────────────────────────── */
+  /* TYPOGRAPHY SCALE — φ-based type ramp */
+  /* ─────────────────────────────────────────────────────────────────────── */
+  --type-3xs: 7.64px;
+  --type-2xs: 10px;
+  --type-xs: 12.36px;
+  --type-sm: 14px;
+  --type-base: 16px;
+  --type-md: 18px;
+  --type-lg: 20px;
+  --type-xl: 25.89px;
+  --type-2xl: 32.36px;
+  --type-3xl: 41.89px;
+  --type-4xl: 52.33px;
+  --type-5xl: 67.77px;
+  --type-6xl: 109.66px;
+  --type-7xl: 177.35px;
+
+  /* ─────────────────────────────────────────────────────────────────────── */
+  /* BACKGROUND & SURFACE COLORS — The Abyss */
+  /* ─────────────────────────────────────────────────────────────────────── */
+  --c-abyss: #050505;
+  --c-void: #000000;
+  --c-surface-1: #0a0a0b;
+  --c-surface-2: #141416;
+  --c-surface-3: #212124;
+
+  /* ─────────────────────────────────────────────────────────────────────── */
+  /* PRIMARY ACCENT — Sacred Amber */
+  /* ─────────────────────────────────────────────────────────────────────── */
+  --c-lcd-amber: #ffb000;
+  --c-amber-dim: #996a00;
+  --c-amber-hot: #ffd700;
+  --c-amber-glow: #ffb000;
+
+  /* ─────────────────────────────────────────────────────────────────────── */
+  /* SEMANTIC ACCENTS */
+  /* ─────────────────────────────────────────────────────────────────────── */
+  --c-profit: #00ff88;
+  --c-loss: #ff2244;
+  --c-info: #00c8ff;
+  --c-mystic: #cc66ff;
+  --c-warning: #ff8800;
+
+  /* ─────────────────────────────────────────────────────────────────────── */
+  /* TEXT HIERARCHY */
+  /* ─────────────────────────────────────────────────────────────────────── */
+  --c-text-primary: #ffffff;
+  --c-text-secondary: #b0b0b8;
+  --c-text-muted: #666670;
+  --c-text-dim: #333338;
+
+  /* ─────────────────────────────────────────────────────────────────────── */
+  /* STRUCTURE & BORDERS */
+  /* ─────────────────────────────────────────────────────────────────────── */
+  --c-border: rgba(255, 176, 0, 0.12);
+  --c-border-light: rgba(255, 255, 255, 0.06);
+
+  /* ─────────────────────────────────────────────────────────────────────── */
+  /* GLOWS & EFFECTS */
+  /* ─────────────────────────────────────────────────────────────────────── */
+  --glow-amber: 0 0 20px rgba(255, 176, 0, 0.4);
+  --glow-amber-intense: 0 0 40px rgba(255, 176, 0, 0.6);
+  --glow-profit: 0 0 20px rgba(0, 255, 136, 0.3);
+  --glow-mystic: 0 0 20px rgba(204, 102, 255, 0.3);
+
+  /* ─────────────────────────────────────────────────────────────────────── */
+  /* OPACITY LEVELS */
+  /* ─────────────────────────────────────────────────────────────────────── */
+  --o-whisper: 0.04;
+  --o-ghost: 0.08;
+  --o-dim: 0.16;
+  --o-muted: 0.4;
+  --o-heavy: 0.85;
+
+  /* ─────────────────────────────────────────────────────────────────────── */
+  /* SHADOW & DEPTH LEVELS (1-30) */
+  /* ─────────────────────────────────────────────────────────────────────── */
+  --depth-1: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --depth-2: 0 2px 4px rgba(0, 0, 0, 0.5);
+  --depth-3: 0 4px 8px rgba(0, 0, 0, 0.6);
+  --depth-4: 0 8px 16px rgba(0, 0, 0, 0.7);
+  --depth-5: 0 12px 24px rgba(0, 0, 0, 0.75);
+  --depth-6: 0 16px 32px rgba(0, 0, 0, 0.8);
+  --depth-8: 0 24px 48px rgba(0, 0, 0, 0.85);
+  --depth-10: 0 32px 64px rgba(0, 0, 0, 0.9);
+  --depth-12: 0 40px 80px rgba(0, 0, 0, 0.95);
+  --depth-16: 0 48px 96px rgba(0, 0, 0, 0.98);
+  --depth-20: 0 56px 112px rgba(0, 0, 0, 1);
+  --depth-24: 0 64px 128px rgba(0, 0, 0, 1);
+  --depth-30: 0 80px 160px rgba(0, 0, 0, 1);
+
+  /* Inset shadows (for card recesses) */
+  --inset-light: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  --inset-strong: inset 0 -4px 16px rgba(0, 0, 0, 0.4);
+
+  /* ─────────────────────────────────────────────────────────────────────── */
+  /* EASING FUNCTIONS — φ-based */
+  /* ─────────────────────────────────────────────────────────────────────── */
+  --ease-phi: cubic-bezier(0.618, 0, 0.382, 1);
+  --ease-in: cubic-bezier(0.618, 0.05, 0.618, 0.2);
+  --ease-out: cubic-bezier(0.382, 0.8, 0.382, 0.95);
+  --ease-in-out: cubic-bezier(0.618, 0.05, 0.382, 0.95);
+
+  /* ─────────────────────────────────────────────────────────────────────── */
+  /* ANIMATION DURATIONS */
+  /* ─────────────────────────────────────────────────────────────────────── */
+  --dur-instant: 100ms;
+  --dur-fast: 161ms;
+  --dur-mid: 262ms;
+  --dur-slow: 424ms;
+  --dur-dramatic: 686ms;
+  --dur-epic: 1618ms;
+
+  /* ─────────────────────────────────────────────────────────────────────── */
+  /* BORDER RADIUS */
+  /* ─────────────────────────────────────────────────────────────────────── */
+  --r-xs: 4px;
+  --r-sm: 6px;
+  --r-base: 8px;
+  --r-md: 12px;
+  --r-lg: 16px;
+  --r-xl: 24px;
+  --r-2xl: 32px;
+  --r-full: 9999px;
+
+  /* ─────────────────────────────────────────────────────────────────────── */
+  /* GRADIENTS */
+  /* ─────────────────────────────────────────────────────────────────────── */
+  --grad-hero: linear-gradient(
+    135deg,
+    #050505 0%,
+    #0a0a0b 30%,
+    #141416 60%,
+    #050505 100%
+  );
+  --grad-amber-sweep: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 176, 0, 0.12),
+    transparent
+  );
+  --grad-cosmic: radial-gradient(
+    ellipse at 50% 0%,
+    rgba(255, 176, 0, 0.05) 0%,
+    rgba(204, 102, 255, 0.03) 40%,
+    transparent 70%
+  );
+
+  /* ─────────────────────────────────────────────────────────────────────── */
+  /* BACKDROP FILTERS */
+  /* ─────────────────────────────────────────────────────────────────────── */
+  --bf-light: blur(4px) saturate(1.2);
+  --bf-medium: blur(10px) saturate(1.4);
+  --bf-heavy: blur(20px) saturate(1.618);
+
+  /* ─────────────────────────────────────────────────────────────────────── */
+  /* Z-INDEX SCALE */
+  /* ─────────────────────────────────────────────────────────────────────── */
+  --z-base: 1;
+  --z-dropdown: 100;
+  --z-sticky: 500;
+  --z-navbar: 1000;
+  --z-modal: 5000;
+  --z-loader: 9999;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════ */
+/* COMPONENT CLASSES */
+/* ═══════════════════════════════════════════════════════════════════════════ */
+
+/* ─────────────────────────────────────────────────────────────────────── */
+/* GLASS CARD — Frosted glass panel with depth */
+/* ─────────────────────────────────────────────────────────────────────── */
+.s-card-glass {
+  background: rgba(10, 10, 11, 0.5);
+  backdrop-filter: var(--bf-medium);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-lg);
+  box-shadow: var(--depth-4), var(--inset-light);
+  transition: all var(--dur-mid) var(--ease-phi);
+}
+
+.s-card-glass:hover {
+  border-color: rgba(255, 176, 0, 0.3);
+  background: rgba(10, 10, 11, 0.65);
+  box-shadow: var(--depth-8), var(--glow-amber), var(--inset-light);
+  transform: translateY(-2px);
+}
+
+/* ─────────────────────────────────────────────────────────────────────── */
+/* METAL CARD — Brushed titanium texture */
+/* ─────────────────────────────────────────────────────────────────────── */
+.s-card-metal {
+  background: linear-gradient(
+    135deg,
+    rgba(20, 20, 22, 0.8) 0%,
+    rgba(14, 14, 15, 0.9) 50%,
+    rgba(20, 20, 22, 0.8) 100%
+  );
+  background-size: 200% 200%;
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-lg);
+  box-shadow: var(--depth-4), var(--inset-light), var(--inset-strong);
+  transition: all var(--dur-mid) var(--ease-phi);
+}
+
+.s-card-metal:hover {
+  border-color: rgba(255, 176, 0, 0.4);
+  box-shadow: var(--depth-6), var(--glow-amber), var(--inset-light),
+    var(--inset-strong);
+  transform: translateY(-2px);
+}
+
+/* ─────────────────────────────────────────────────────────────────────── */
+/* INSET CARD — Recessed panel (spec/stat cards) */
+/* ─────────────────────────────────────────────────────────────────────── */
+.s-card-inset {
+  background: rgba(5, 5, 5, 0.6);
+  border: 1px solid var(--c-border-light);
+  border-radius: var(--r-md);
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.5);
+  padding: var(--phi-4) var(--phi-5);
+}
+
+/* ─────────────────────────────────────────────────────────────────────── */
+/* BUTTONS */
+/* ─────────────────────────────────────────────────────────────────────── */
+.s-btn-actuator {
+  background: var(--c-lcd-amber);
+  color: var(--c-void);
+  border: none;
+  border-radius: var(--r-md);
+  font-weight: 600;
+  padding: var(--phi-3) var(--phi-5);
+  font-size: var(--type-base);
+  cursor: pointer;
+  transition: all var(--dur-fast) var(--ease-phi);
+  box-shadow: 0 4px 12px rgba(255, 176, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.s-btn-actuator::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.1);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform var(--dur-fast) var(--ease-phi);
+}
+
+.s-btn-actuator:hover {
+  box-shadow: 0 6px 20px rgba(255, 176, 0, 0.4), var(--glow-amber);
+  transform: translateY(-2px);
+}
+
+.s-btn-actuator:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(255, 176, 0, 0.2);
+}
+
+.s-btn-ghost {
+  background: transparent;
+  color: var(--c-text-primary);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-md);
+  padding: var(--phi-3) var(--phi-5);
+  font-size: var(--type-base);
+  cursor: pointer;
+  transition: all var(--dur-mid) var(--ease-phi);
+}
+
+.s-btn-ghost:hover {
+  border-color: var(--c-lcd-amber);
+  color: var(--c-lcd-amber);
+  box-shadow: 0 0 12px rgba(255, 176, 0, 0.2);
+}
+
+/* ─────────────────────────────────────────────────────────────────────── */
+/* TEXT & GLOW EFFECTS */
+/* ─────────────────────────────────────────────────────────────────────── */
+.s-glow-amber {
+  color: var(--c-lcd-amber);
+  text-shadow: 0 0 10px rgba(255, 176, 0, 0.4),
+    0 0 20px rgba(255, 176, 0, 0.2);
+}
+
+.s-text-lcd {
+  font-family: "JetBrains Mono", "Courier New", monospace;
+  font-weight: 400;
+  color: var(--c-lcd-amber);
+  text-shadow: 0 0 8px rgba(255, 176, 0, 0.3);
+  letter-spacing: 0.05em;
+}
+
+/* ─────────────────────────────────────────────────────────────────────── */
+/* BADGES */
+/* ─────────────────────────────────────────────────────────────────────── */
+.s-badge {
+  display: inline-block;
+  background: rgba(10, 10, 11, 0.5);
+  backdrop-filter: var(--bf-light);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-full);
+  padding: 4px var(--phi-3);
+  font-size: var(--type-2xs);
+  color: var(--c-text-muted);
+  transition: all var(--dur-mid) var(--ease-phi);
+}
+
+.s-badge:hover {
+  border-color: var(--c-lcd-amber);
+  color: var(--c-lcd-amber);
+  box-shadow: 0 0 8px rgba(255, 176, 0, 0.2);
+}
+
+/* ─────────────────────────────────────────────────────────────────────── */
+/* FORM INPUTS */
+/* ─────────────────────────────────────────────────────────────────────── */
+.s-form-input {
+  background: rgba(10, 10, 11, 0.5);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-md);
+  padding: var(--phi-2) var(--phi-4);
+  color: var(--c-text-primary);
+  font-size: var(--type-base);
+  transition: all var(--dur-mid) var(--ease-phi);
+}
+
+.s-form-input::placeholder {
+  color: var(--c-text-dim);
+}
+
+.s-form-input:focus {
+  outline: none;
+  border-color: var(--c-lcd-amber);
+  box-shadow: 0 0 16px rgba(255, 176, 0, 0.2);
+  background: rgba(10, 10, 11, 0.7);
+}
+
+/* ─────────────────────────────────────────────────────────────────────── */
+/* GRID SYSTEM — φ-proportioned */
+/* ─────────────────────────────────────────────────────────────────────── */
+.phi-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--phi-5);
+}
+
+.phi-grid-split {
+  display: grid;
+  grid-template-columns: 38.2% 1fr;
+  gap: var(--phi-5);
+  align-items: center;
+}
+
+.phi-grid-split.reverse {
+  grid-template-columns: 1fr 38.2%;
+}
+
+/* ─────────────────────────────────────────────────────────────────────── */
+/* DEPTH LAYERS */
+/* ─────────────────────────────────────────────────────────────────────── */
+.s-depth-1 {
+  box-shadow: var(--depth-1);
+}
+.s-depth-2 {
+  box-shadow: var(--depth-2);
+}
+.s-depth-4 {
+  box-shadow: var(--depth-4);
+}
+.s-depth-6 {
+  box-shadow: var(--depth-6);
+}
+.s-depth-8 {
+  box-shadow: var(--depth-8);
+}
+.s-depth-12 {
+  box-shadow: var(--depth-12);
+}
+
+/* ─────────────────────────────────────────────────────────────────────── */
+/* UTILITY CLASSES */
+/* ─────────────────────────────────────────────────────────────────────── */
+.s-no-scroll {
+  overflow: hidden;
+}
+
+.s-clip-path-circle {
+  clip-path: circle(100%);
+}
+
+.s-gpu-composite {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* ─────────────────────────────────────────────────────────────────────── */
+/* ANIMATIONS */
+/* ─────────────────────────────────────────────────────────────────────── */
+@keyframes breathe {
+  0%, 100% {
+    opacity: 0.04;
+  }
+  50% {
+    opacity: 0.08;
+  }
+}
+
+@keyframes rotate-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes float-up {
+  from {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(255, 176, 0, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 176, 0, 0.4);
+  }
+}
+
+.animate-breathe {
+  animation: breathe 4s var(--ease-phi) infinite;
+}
+
+.animate-rotate-slow {
+  animation: rotate-slow 120s linear infinite;
+}
+
+.animate-float-up {
+  animation: float-up 3s var(--ease-phi) infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s var(--ease-phi) infinite;
+}
+
+/* ─────────────────────────────────────────────────────────────────────── */
+/* SCROLLBAR STYLING */
+/* ─────────────────────────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--c-abyss);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--c-lcd-amber);
+  border-radius: var(--r-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--c-amber-hot);
+}
+
+/* ─────────────────────────────────────────────────────────────────────── */
+/* RESPONSIVE ADJUSTMENTS */
+/* ─────────────────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  :root {
+    --type-7xl: 89px;
+    --type-6xl: 54px;
+    --type-5xl: 34px;
+    --type-4xl: 26px;
+  }
+
+  .phi-grid {
+    gap: var(--phi-3);
+  }
+
+  .phi-grid-split {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* EOF */
